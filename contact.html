@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Maurits T">
+	<meta name="description" content="Heb je een vraag, suggestie of feedback? Neem contact op met Mode Match via het formulier. Wij reageren binnen 24 uur.">
+	<meta name="keywords" content="mode, kledingstijlen, outfits, inspiratie, Mode Match">
+	<title>Contact &ndash; Mode Match&trade;</title>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="contact">
+		<header class="paginakop">
+			<a class="logo" href="index.html" title="Naar de homepagina van Mode Match"><img src="img/logo.png" alt="Mode Match - Ontdek jouw style" title="Mode Match&trade; - Ontdek jouw style" width="1677" height="646"></a>
+			<input type="checkbox" id="menu-schakelaar" class="menu-schakelaar">
+			<label for="menu-schakelaar" class="hamburger" title="Menu openen"><span class="verborgen">Menu openen</span></label>
+			<nav class="hoofdmenu">
+				<h2 class="verborgen">Hoofdmenu</h2>
+				<label for="menu-schakelaar" class="sluiten" title="Menu sluiten"><span class="verborgen">Menu sluiten</span></label>
+				<ul>
+					<li><a href="index.html" title="Naar Home">Home</a></li>
+					<li><a href="index.html#stijlen" title="Naar de stijlen">Stijlen</a></li>
+					<li><a href="contact.html" title="Naar Contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="contact-intro">
+				<h1>Heb jij een vraag of idee?</h1>
+				<p><span class="regel">Heb je een vraag, suggestie of feedback?</span> <span class="regel">Laat het ons weten.</span></p>
+				<img src="img/contact-banner.jpg" alt="Kledingrek met truien en overhemden naast een plant" title="Mode Match kledingrek" width="2172" height="724">
+			</section>
+			<section class="contact-redenen">
+				<h2>Waarvoor kun je ons contacteren?</h2>
+				<section class="redenen">
+					<h3 class="verborgen">Redenen om contact op te nemen</h3>
+					<article>
+						<span class="icoon-cirkel"><img src="img/icoon-vraag.png" alt="Vraagteken-icoon" title="Vraag"></span>
+						<h3>Vraag</h3>
+						<p>Stel ons je vraag.</p>
+					</article>
+					<article>
+						<span class="icoon-cirkel"><img src="img/icoon-suggestie.png" alt="Gloeilamp-icoon" title="Suggestie"></span>
+						<h3>Suggestie</h3>
+						<p><span class="regel">Heb je een goed idee?</span> <span class="regel">Laat het ons weten!</span></p>
+					</article>
+					<article>
+						<span class="icoon-cirkel"><img src="img/icoon-feedback.png" alt="Tekstballon-icoon" title="Feedback"></span>
+						<h3>Feedback</h3>
+						<p><span class="regel">Deel je mening en help</span> <span class="regel">ons verbeteren.</span></p>
+					</article>
+					<article>
+						<span class="icoon-cirkel"><img src="img/icoon-fout.png" alt="Uitroepteken-icoon" title="Fout melden"></span>
+						<h3>Fout melden</h3>
+						<p><span class="regel">Zie je een fout?</span> <span class="regel">meld het hier.</span></p>
+					</article>
+				</section>
+			</section>
+			<section class="contact-formulier">
+				<h2>Stuur ons een bericht</h2>
+				<form action="contact.html#bericht-verstuurd" method="get">
+					<fieldset>
+						<legend>Aanhef <strong>*</strong></legend>
+						<section class="aanhef-keuze">
+							<label for="aanhef-dhr"><input type="radio" id="aanhef-dhr" name="aanhef" value="dhr" required>Dhr.</label>
+							<label for="aanhef-mevr"><input type="radio" id="aanhef-mevr" name="aanhef" value="mevr">Mevr.</label>
+							<label for="aanhef-anders"><input type="radio" id="aanhef-anders" name="aanhef" value="anders">Anders / zeg ik liever niet</label>
+						</section>
+					</fieldset>
+					<p class="veld">
+						<label for="naam">Naam <strong>*</strong></label>
+						<input type="text" id="naam" name="naam" placeholder="Voer je naam in" required>
+					</p>
+					<p class="veld">
+						<label for="email">E-mailadres <strong>*</strong></label>
+						<input type="email" id="email" name="email" placeholder="Voer je e-mailadres in" required>
+					</p>
+					<p class="veld">
+						<label for="telefoon">Telefoonnummer</label>
+						<input type="tel" id="telefoon" name="telefoon" placeholder="Voer je telefoonnummer in">
+					</p>
+					<p class="veld">
+						<label for="vraag">Vraag / Verzoek <strong>*</strong></label>
+						<textarea id="vraag" name="vraag" rows="1" placeholder="Typ hier je vraag of verzoek..." required></textarea>
+					</p>
+					<input type="submit" class="verstuur" value="Verstuur bericht">
+				</form>
+			</section>
+			<aside id="bericht-verstuurd" class="bevestiging">
+				<h2>Bericht verstuurd!</h2>
+				<p>Wij zullen binnen 24 uur reageren.</p>
+				<a class="knop" href="contact.html" title="Sluit dit bericht">Sluiten</a>
+			</aside>
+		</main>
+		<footer class="paginavoet">
+			<section class="voet-raster">
+				<h2 class="verborgen">Voettekst</h2>
+				<a class="voet-logo" href="index.html" title="Naar de homepagina van Mode Match"><img src="img/logo.png" alt="Mode Match - Ontdek jouw style" title="Mode Match&trade; - Ontdek jouw style" width="1677" height="646"></a>
+				<nav class="voet-kolom">
+					<h2>Snel naar</h2>
+					<ul>
+						<li><a href="index.html" title="Naar Home">Home</a></li>
+						<li><a href="index.html#stijlen" title="Naar de stijlen">Stijlen</a></li>
+						<li><a href="index.html#over-ons" title="Meer over Mode Match">Over ons</a></li>
+						<li><a href="contact.html" title="Naar Contact">Contact</a></li>
+					</ul>
+				</nav>
+				<nav class="voet-kolom">
+					<h2>De stijlen</h2>
+					<ul>
+						<li><a href="sport.html" title="Naar Sport style">Sport</a></li>
+						<li><a href="vintage.html" title="Naar Vintage style">Vintage</a></li>
+						<li><a href="casual.html" title="Naar Casual style">Casual</a></li>
+						<li><a href="streetwear.html" title="Naar Streetwear style">Streetwear</a></li>
+					</ul>
+				</nav>
+				<section class="voet-socials">
+					<h2>Socials</h2>
+					<ul class="socials-lijst">
+						<li><a href="https://x.com" target="_blank" rel="noopener" title="Mode Match op X"><img src="img/social-x.png" alt="X" title="X"></a></li>
+						<li><a href="https://www.instagram.com" target="_blank" rel="noopener" title="Mode Match op Instagram"><img src="img/social-instagram.png" alt="Instagram" title="Instagram"></a></li>
+						<li><a href="https://www.youtube.com" target="_blank" rel="noopener" title="Mode Match op YouTube"><img src="img/social-youtube.png" alt="YouTube" title="YouTube"></a></li>
+						<li><a href="https://www.linkedin.com" target="_blank" rel="noopener" title="Mode Match op LinkedIn"><img src="img/social-linkedin.png" alt="LinkedIn" title="LinkedIn"></a></li>
+					</ul>
+				</section>
+			</section>
+			<small class="copyright">&copy; 2026 Mode Match&reg; &ndash; Ontdek jouw style. Alle rechten voorbehouden.</small>
+		</footer>
+	</body>
+</html>
