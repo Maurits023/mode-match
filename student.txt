@@ -1,5 +1,5 @@
 Student name: Maurits Tettero
 Student number: 761291
 Student class: HAINF26VT1A
-GitHub Repository: your github repository URL
-GitHub Pages URL: your github pages URL
+GitHub Repository: https://github.com/Maurits023/mode-match
+GitHub Pages URL: https://Maurits023.github.io/mode-match/
