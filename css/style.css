@@ -1,0 +1,1718 @@
+/* ==========================================================================
+   Mode Match - hoofdstijlblad
+   Lettertypen: Playfair Display (koppen), Inter (tekst)
+   Kleuren: #FFFFFF (60%), #1C1C1C (30%), #7A8065 (10%), #E6E1D8, #D9D9D9
+   Opbouw: 1. basis  2. header  3. home  4. stijlpagina's  5. contact
+           6. footer  7. pop-ups  8. desktop (min 769px)  9. mobiel (max 768px)
+   ========================================================================== */
+
+/* 1. Basis ---------------------------------------------------------------- */
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: "Inter", Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0;
+	word-spacing: normal;
+	color: #1C1C1C;
+	background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+	font-family: "Playfair Display", Georgia, serif;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+p {
+	margin: 0;
+	text-indent: 0;
+}
+
+.uitleg-vlak p::first-letter {
+	text-transform: uppercase;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: #1C1C1C;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #1C1C1C;
+}
+
+a:hover {
+	color: #7A8065;
+}
+
+a:active {
+	color: #1C1C1C;
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 2px solid #7A8065;
+	outline-offset: 3px;
+}
+
+.verborgen {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+	white-space: nowrap;
+}
+
+.regel {
+	display: inline-block;
+	max-width: 100%;
+}
+
+.contact-intro .regel,
+.redenen .regel,
+.intro-tekst .regel {
+	display: block;
+}
+
+/* Knoppen */
+.knop {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	background-color: #7A8065;
+	color: #1C1C1C;
+	font-family: "Inter", Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	border: 0;
+	cursor: pointer;
+}
+
+.knop:visited {
+	color: #1C1C1C;
+}
+
+.knop:hover {
+	background-color: #1C1C1C;
+	color: #E6E1D8;
+}
+
+.knop:active {
+	background-color: #1C1C1C;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.knop-pijl::after {
+	content: "";
+	display: block;
+	width: 32px;
+	height: 14px;
+	background-image: url("../img/pijl.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.knop-pijl:hover::after {
+	filter: invert(1);
+}
+
+/* 2. Header en navigatie -------------------------------------------------- */
+.paginakop {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+}
+
+.logo {
+	display: block;
+}
+
+.hoofdmenu ul {
+	display: flex;
+}
+
+.hoofdmenu a {
+	font-family: "Playfair Display", Georgia, serif;
+}
+
+.menu-schakelaar {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.hamburger,
+.sluiten {
+	display: none;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.menu-schakelaar:focus + .hamburger {
+	outline: 2px solid #7A8065;
+	outline-offset: 3px;
+}
+
+/* 3. Home ----------------------------------------------------------------- */
+.hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.hero > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero-tekst {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.hero-tekst h1 {
+	line-height: 1.2;
+}
+
+.hero-tekst p {
+	font-family: "Playfair Display", Georgia, serif;
+}
+
+.kaarten {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.kaarten a,
+.kenmerken-lijst a {
+	display: block;
+}
+
+.kaarten img {
+	width: 100%;
+	object-fit: cover;
+	object-position: center top;
+}
+
+.kaarten figcaption {
+	display: grid;
+	grid-template-columns: 1fr 26px;
+	align-items: center;
+	background-color: #E6E1D8;
+}
+
+.kaarten figcaption::after {
+	content: "";
+	grid-column: 2;
+	grid-row: 1 / span 2;
+	width: 26px;
+	height: 14px;
+	background-image: url("../img/pijl.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.kaarten h3 {
+	font-size: 1.5rem;
+	line-height: 1.2;
+}
+
+.kaarten p {
+	font-family: "Playfair Display", Georgia, serif;
+	line-height: 1.2;
+}
+
+.inspiratie {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.inspiratie > figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.inspiratie-tekst {
+	background-color: #E6E1D8;
+}
+
+.inspiratie-tekst h3 {
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+
+/* 4. Stijlpagina's -------------------------------------------------------- */
+.intro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.intro-tekst {
+	background-color: #D9D9D9;
+}
+
+.intro-tekst p {
+	font-family: "Playfair Display", Georgia, serif;
+}
+
+.intro > figure,
+.intro > figure img {
+	width: 100%;
+	height: 100%;
+}
+
+.intro > figure img {
+	object-fit: cover;
+}
+
+.uitleg h2 {
+	text-align: center;
+}
+
+.uitleg-vlak {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.uitleg-sport {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("../img/sport-achtergrond.jpg");
+}
+
+.uitleg-vintage {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("../img/vintage-achtergrond.jpg");
+}
+
+.uitleg-casual {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("../img/casual-achtergrond.jpg");
+}
+
+.uitleg-streetwear {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("../img/streetwear-achtergrond.jpg");
+}
+
+.uitleg-vlak p {
+	box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.92);
+	box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.92);
+}
+
+.uitleg-vlak p:nth-of-type(odd) {
+	align-self: flex-start;
+}
+
+.uitleg-vlak p:nth-of-type(even) {
+	align-self: flex-end;
+}
+
+.kenmerken h2,
+.outfit h2 {
+	text-align: center;
+}
+
+.kenmerken-lijst {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.kenmerken-lijst img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.kenmerken-lijst figcaption {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #E6E1D8;
+	font-family: "Playfair Display", Georgia, serif;
+}
+
+.outfit-vlak {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	box-sizing: border-box;
+	margin: 0 auto;
+	background-color: #E6E1D8;
+}
+
+.outfit-vlak figure {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.outfit-vlak img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.outfit-vlak figcaption {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #D9D9D9;
+	font-family: "Playfair Display", Georgia, serif;
+}
+
+.winkelknop {
+	text-align: center;
+}
+
+.winkelknop .knop {
+	text-transform: lowercase;
+	font-size: 0.875rem;
+}
+
+/* 5. Contact -------------------------------------------------------------- */
+.contact-intro {
+	text-align: center;
+}
+
+.contact-intro p {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-intro img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-redenen h2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.contact-redenen h2::before,
+.contact-redenen h2::after {
+	content: "";
+	flex: 1 1 auto;
+	height: 1px;
+	background-color: #1C1C1C;
+}
+
+.redenen {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.redenen article {
+	box-sizing: border-box;
+	background-color: #E6E1D8;
+	text-align: center;
+}
+
+.redenen h3 {
+	font-family: "Inter", Arial, sans-serif;
+	font-weight: 400;
+}
+
+.icoon-cirkel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	background-color: #7A8065;
+}
+
+.icoon-cirkel img {
+	width: 50%;
+	height: 50%;
+	object-fit: contain;
+}
+
+.contact-formulier h2 {
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+
+.contact-formulier form {
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #E6E1D8;
+}
+
+.contact-formulier fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	min-width: 0;
+}
+
+.contact-formulier legend {
+	padding: 0;
+}
+
+.aanhef-keuze {
+	display: flex;
+	justify-content: space-between;
+}
+
+.aanhef-keuze label {
+	display: flex;
+	align-items: center;
+}
+
+.aanhef-keuze input {
+	margin: 0 8px 0 0;
+}
+
+.veld {
+	display: block;
+}
+
+.veld label {
+	display: block;
+}
+
+.veld input,
+.veld textarea {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	font-family: "Inter", Arial, sans-serif;
+	color: #1C1C1C;
+}
+
+.veld input:focus,
+.veld textarea:focus {
+	outline: 2px solid #7A8065;
+	border-color: #7A8065;
+}
+
+.veld textarea {
+	resize: vertical;
+}
+
+.verstuur {
+	display: block;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0;
+	background-color: #7A8065;
+	background-image: url("../img/pijl.svg");
+	background-repeat: no-repeat;
+	background-size: 30px 13px;
+	color: #1C1C1C;
+	font-family: "Inter", Arial, sans-serif;
+	cursor: pointer;
+}
+
+.verstuur:hover {
+	background-color: #1C1C1C;
+	color: #E6E1D8;
+}
+
+.verstuur:active {
+	background-color: #1C1C1C;
+	color: #FFFFFF;
+}
+
+/* 6. Footer --------------------------------------------------------------- */
+.paginavoet {
+	box-sizing: border-box;
+}
+
+.paginavoet h2 {
+	font-family: "Inter", Arial, sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.paginavoet a {
+	font-family: "Inter", Arial, sans-serif;
+}
+
+.voet-logo img {
+	height: auto;
+}
+
+.socials-lijst {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.socials-lijst li {
+	float: left;
+}
+
+.socials-lijst li {
+	display: flex;
+	align-items: center;
+	height: 26px;
+}
+
+.socials-lijst img {
+	width: 24px;
+	height: auto;
+}
+
+.copyright {
+	display: block;
+	text-align: center;
+	font-size: 0.75rem;
+}
+
+/* 7. Pop-ups -------------------------------------------------------------- */
+.cookies {
+	position: fixed;
+	z-index: 9999;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	border-style: double;
+	border-width: 4px;
+	border-color: #1C1C1C;
+	color: #1C1C1C;
+}
+
+.cookies-schakelaar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.cookies-schakelaar:checked + .cookies {
+	display: none;
+}
+
+.cookies-schakelaar:focus + .cookies {
+	outline: 3px solid #7A8065;
+}
+
+.cookies h2 {
+	font-size: 1.5rem;
+}
+
+.cookies p {
+	font-size: 0.875rem;
+	line-height: 1.5;
+	text-indent: 0;
+}
+
+.cookies-knoppen {
+	display: flex;
+}
+
+.cookies .knop {
+	height: 40px;
+	padding: 0 20px;
+	font-size: 0.8125rem;
+}
+
+.cookies .knop-grijs {
+	background-color: #D9D9D9;
+}
+
+.cookies .knop-grijs:hover {
+	background-color: #1C1C1C;
+	color: #E6E1D8;
+}
+
+.bevestiging {
+	display: none;
+	position: fixed;
+	z-index: 9998;
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+	width: 92%;
+	max-width: 420px;
+	padding: 28px 24px 32px;
+	transform: translate(-50%, -50%);
+	background-color: #FFFFFF;
+	border: 1px solid #1C1C1C;
+	text-align: center;
+}
+
+.bevestiging:target {
+	display: block;
+}
+
+.bevestiging h2,
+.bevestiging p {
+	font-family: "Inter", Arial, sans-serif;
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.bevestiging p {
+	margin-top: 14px;
+}
+
+.bevestiging .knop {
+	width: 180px;
+	height: 36px;
+	margin-top: 22px;
+	font-size: 1rem;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+/* 8. Desktop (vanaf 769px) ------------------------------------------------ */
+@media (min-width: 769px) {
+	.paginakop {
+		height: 110px;
+		padding: 0 25px;
+	}
+
+	.logo img {
+		width: 186px;
+	}
+
+	body.home .paginakop {
+		height: 90px;
+		align-items: start;
+	}
+
+	body.home .logo {
+		margin-top: 5px;
+	}
+
+	body.home .logo img {
+		width: 163px;
+	}
+
+	body.home .hoofdmenu {
+		height: 90px;
+	}
+
+	body.contact .paginakop {
+		border-bottom: 1px solid #1C1C1C;
+	}
+
+	.hoofdmenu {
+		display: flex;
+		align-items: center;
+	}
+
+	.hoofdmenu ul {
+		gap: 61px;
+	}
+
+	.hoofdmenu a {
+		font-size: 1.375rem;
+	}
+
+	.hoofdmenu .sluiten {
+		display: none;
+	}
+
+	.alleen-mobiel {
+		display: none;
+	}
+
+	/* Home */
+	.hero {
+		height: 451px;
+	}
+
+	.hero-tekst {
+		padding-top: 75px;
+	}
+
+	.hero-tekst h1 {
+		margin-left: 47px;
+		font-size: 4rem;
+	}
+
+	.hero-tekst p {
+		max-width: 400px;
+		margin: 40px 0 0 95px;
+		font-size: 1.375rem;
+		line-height: 1.5;
+	}
+
+	.hero-tekst .knop {
+		width: 255px;
+		height: 50px;
+		margin: 49px 0 0 106px;
+		gap: 22px;
+	}
+
+	.stijlen,
+	.inspiratie-sectie {
+		text-align: center;
+	}
+
+	.stijlen {
+		padding: 55px 52px 0;
+	}
+
+	.stijlen h2,
+	.inspiratie-sectie h2 {
+		font-size: 2.25rem;
+	}
+
+	.stijlen h2 {
+		margin-bottom: 52px;
+	}
+
+	.kaarten {
+		gap: 52px;
+		text-align: left;
+	}
+
+	.kaarten img {
+		height: 21vw;
+	}
+
+	.kaarten figcaption {
+		height: 68px;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+
+	.kaarten p {
+		font-size: 0.6875rem;
+	}
+
+	.inspiratie-sectie h2 {
+		margin: 55px 0 47px;
+	}
+
+	.inspiratie {
+		height: 418px;
+		overflow: hidden;
+		grid-template-rows: 100%;
+		text-align: left;
+	}
+
+	.hero-tekst .regel {
+		display: block;
+	}
+
+	.alleen-desktop {
+		display: inline;
+	}
+
+	.inspiratie-tekst {
+		padding: 56px 79px 0;
+	}
+
+	.inspiratie-tekst h3 {
+		margin-bottom: 30px;
+		font-size: 2.25rem;
+	}
+
+	.inspiratie-tekst p {
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+
+	.inspiratie-tekst .knop {
+		width: 256px;
+		height: 52px;
+		margin-top: 38px;
+		gap: 22px;
+	}
+
+	/* Stijlpagina's */
+	.intro {
+		height: 276px;
+	}
+
+	.intro-tekst {
+		padding: 43px 34px 0;
+	}
+
+	.intro-tekst h1 {
+		font-size: 4rem;
+	}
+
+	.intro-tekst p {
+		margin-top: 44px;
+		font-size: 1.375rem;
+		line-height: 1.45;
+	}
+
+	.uitleg h2,
+	.kenmerken h2,
+	.outfit h2 {
+		font-size: 2.25rem;
+	}
+
+	.uitleg h2 {
+		padding: 32px 0 30px;
+	}
+
+	.uitleg-vlak {
+		height: 455px;
+		padding: 31px 0;
+		box-sizing: border-box;
+	}
+
+	.uitleg-vlak p {
+		padding: 12px 19px;
+		font-size: 1.125rem;
+		line-height: 1.5;
+	}
+
+	.uitleg-vlak p:nth-of-type(1) {
+		width: 52%;
+		margin-left: 26px;
+	}
+
+	.uitleg-vlak p:nth-of-type(2) {
+		width: 55%;
+		margin-right: 38px;
+	}
+
+	.uitleg-vlak p:nth-of-type(3) {
+		width: 55.6%;
+		margin-left: 26px;
+	}
+
+	.kenmerken {
+		padding: 46px 52px 0;
+	}
+
+	.kenmerken h2 {
+		margin-bottom: 58px;
+	}
+
+	.kenmerken-lijst {
+		gap: 52px;
+	}
+
+	.kenmerken-lijst img {
+		height: 20.1vw;
+	}
+
+	.kenmerken-lijst figcaption {
+		height: 66px;
+		font-size: 1.375rem;
+	}
+
+	.outfit {
+		margin-top: 130px;
+	}
+
+	.outfit-vlak {
+		width: 87.5%;
+		margin-top: 40px;
+		padding: 46px 0 44px;
+	}
+
+	.outfit-vlak figure {
+		width: 73%;
+	}
+
+	.outfit-vlak img {
+		height: 636px;
+	}
+
+	.outfit-vlak figcaption {
+		height: 70px;
+		font-size: 2rem;
+	}
+
+	.winkelknop {
+		padding: 36px 0 32px;
+	}
+
+	.winkelknop .knop {
+		width: 256px;
+		height: 52px;
+		gap: 22px;
+	}
+
+	/* Contact */
+	.contact-intro {
+		padding: 40px 0 0;
+	}
+
+	.contact-intro h1 {
+		font-size: 4rem;
+	}
+
+	.contact-intro p {
+		max-width: 480px;
+		margin-top: 24px;
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+
+	.contact-intro img {
+		width: 75%;
+		max-width: 1084px;
+		margin-top: 62px;
+		margin-bottom: 64px;
+	}
+
+	.contact-redenen,
+	.contact-formulier {
+		border-top: 1px solid #1C1C1C;
+	}
+
+	.contact-redenen {
+		padding: 70px 0 62px;
+		border-bottom: 1px solid #1C1C1C;
+	}
+
+	.contact-redenen h2 {
+		gap: 32px;
+		padding: 0 139px 0 139px;
+		font-size: 2.25rem;
+	}
+
+	.redenen {
+		gap: 41px 47px;
+		width: 80%;
+		max-width: 1158px;
+		margin: 60px auto 0;
+	}
+
+	.redenen article {
+		height: 346px;
+		padding-top: 28px;
+		border: 1px solid #1C1C1C;
+	}
+
+	.icoon-cirkel {
+		width: 171px;
+		height: 171px;
+	}
+
+	.redenen h3 {
+		margin-top: 8px;
+		font-size: 1.75rem;
+	}
+
+	.redenen p {
+		margin-top: 16px;
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+
+	.contact-formulier {
+		padding: 60px 0 32px;
+	}
+
+	.contact-formulier h2 {
+		font-size: 3rem;
+	}
+
+	.contact-formulier form {
+		width: 77.5%;
+		margin-top: 50px;
+		padding: 60px 153px 50px;
+	}
+
+	.contact-formulier legend,
+	.veld label {
+		font-size: 0.875rem;
+		line-height: 1.5;
+	}
+
+	.aanhef-keuze {
+		display: grid;
+		grid-template-columns: 248px 243px auto;
+		justify-content: start;
+		margin-top: 22px;
+		font-size: 0.875rem;
+	}
+
+	.veld {
+		margin-top: 58px;
+	}
+
+	.veld label {
+		margin-bottom: 16px;
+	}
+
+	.veld input,
+	.veld textarea {
+		height: 40px;
+		padding: 0 12px;
+		font-size: 0.875rem;
+	}
+
+	.veld textarea {
+		padding: 11px 12px;
+		min-height: 40px;
+	}
+
+	.verstuur {
+		width: 492px;
+		height: 52px;
+		margin-top: 70px;
+		padding: 0 70px 0 0;
+		background-position: right 150px center;
+		font-size: 0.875rem;
+	}
+
+	/* Footer */
+	.paginavoet {
+		padding: 44px 0 40px;
+	}
+
+	body.stijlpagina .paginavoet,
+	body.contact .paginavoet {
+		border-top: 1px solid #1C1C1C;
+	}
+
+	.voet-raster {
+		display: grid;
+		grid-template-columns: 405fr 476fr 207fr 352fr;
+	}
+
+	.voet-logo {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		box-sizing: border-box;
+		height: 120px;
+		padding: 0 30px;
+		border-right: 1px solid #1C1C1C;
+	}
+
+	.voet-logo img {
+		width: 286px;
+		margin-top: -6px;
+	}
+
+	.voet-kolom {
+		min-height: 120px;
+	}
+
+	.voet-kolom:first-of-type {
+		padding-left: 121px;
+	}
+
+	.voet-socials {
+		box-sizing: border-box;
+		height: 120px;
+		border-left: 1px solid #1C1C1C;
+		text-align: center;
+	}
+
+	.paginavoet h2 {
+		font-size: 0.875rem;
+		line-height: 1.5;
+	}
+
+	.voet-kolom ul {
+		margin-top: 22px;
+	}
+
+	.voet-kolom a {
+		display: inline-block;
+		font-size: 0.875rem;
+		line-height: 28px;
+	}
+
+	.socials-lijst {
+		margin-top: 38px;
+	}
+
+	.socials-lijst li {
+		margin: 0 8px;
+	}
+
+	.socials-lijst img {
+		width: 25px;
+	}
+
+	.copyright {
+		margin-top: 36px;
+	}
+
+	/* Cookies */
+	.cookies {
+		bottom: 24px;
+		left: 24px;
+		width: 420px;
+		padding: 24px 28px 28px;
+	}
+
+	.cookies p {
+		margin-top: 10px;
+	}
+
+	.cookies-knoppen {
+		gap: 14px;
+		margin-top: 20px;
+	}
+}
+
+/* 9. Mobiel (tot en met 768px) ------------------------------------------- */
+@media (max-width: 768px) {
+	.paginakop {
+		height: 70px;
+		padding: 0 14px;
+		grid-template-columns: 1fr auto;
+	}
+
+	.logo img {
+		width: 138px;
+	}
+
+	.hamburger {
+		display: block;
+		width: 36px;
+		height: 36px;
+		margin-right: 20px;
+		background-image: url("../img/hamburger.svg");
+		background-size: 18px 15px;
+	}
+
+	.hoofdmenu {
+		display: none;
+	}
+
+	.menu-schakelaar:checked ~ .hoofdmenu {
+		display: block;
+		position: absolute;
+		z-index: 100;
+		top: 0;
+		right: 0;
+		box-sizing: border-box;
+		width: 11.5rem;
+		padding: 18px 24px 22px;
+		background-color: #FFFFFF;
+		border: 1px solid #1C1C1C;
+	}
+
+	.hoofdmenu .sluiten {
+		display: block;
+		width: 30px;
+		height: 30px;
+		margin-left: auto;
+		background-image: url("../img/sluiten.svg");
+		background-size: 18px 18px;
+	}
+
+	.hoofdmenu ul {
+		display: block;
+		margin-top: -4px;
+	}
+
+	.hoofdmenu li {
+		padding: 11px 0;
+	}
+
+	.hoofdmenu a {
+		font-family: "Inter", Arial, sans-serif;
+		font-size: 1.125rem;
+	}
+
+	/* Home */
+	.hero {
+		height: 174px;
+	}
+
+	.hero > img {
+		object-position: 10% center;
+	}
+
+	.hero-tekst {
+		padding: 9px 0 0 19px;
+	}
+
+	.hero-tekst h1 {
+		max-width: 110px;
+		font-size: 1.375rem;
+		line-height: 1;
+	}
+
+	.hero-tekst .regel {
+		display: inline;
+	}
+
+	.hero-tekst p {
+		max-width: 150px;
+		margin-top: 8px;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 1.25;
+	}
+
+	.hero-tekst .knop {
+		width: 125px;
+		height: 20px;
+		margin-top: 14px;
+		gap: 14px;
+		font-size: 0.5625rem;
+	}
+
+	.hero-tekst .knop-pijl::after,
+	.inspiratie-tekst .knop-pijl::after {
+		width: 14px;
+		height: 8px;
+	}
+
+	.stijlen {
+		padding: 10px 11px 0;
+		text-align: center;
+	}
+
+	.stijlen h2,
+	.inspiratie-sectie h2 {
+		font-size: 1.125rem;
+		text-align: center;
+	}
+
+	.stijlen h2 {
+		padding: 0 60px 14px;
+	}
+
+	.kaarten {
+		grid-template-columns: 1fr 1fr;
+		gap: 19px;
+		text-align: left;
+	}
+
+	.kaarten img {
+		height: 110px;
+	}
+
+	.kaarten figcaption {
+		padding: 6px 10px 6px 11px;
+		grid-template-columns: 1fr 22px;
+	}
+
+	.kaarten figcaption::after {
+		width: 22px;
+	}
+
+	.kaarten h3 {
+		font-size: 1rem;
+	}
+
+	.kaarten p {
+		font-size: 0.625rem;
+	}
+
+	.inspiratie-sectie h2 {
+		padding: 24px 0 14px;
+	}
+
+	.alleen-desktop {
+		display: none;
+	}
+
+	.inspiratie {
+		grid-template-columns: 1fr;
+		width: 300px;
+		margin: 0 auto 20px;
+	}
+
+	.inspiratie > figure img {
+		height: 150px;
+	}
+
+	.inspiratie-tekst {
+		padding: 14px 14px 18px;
+	}
+
+	.inspiratie-tekst h3 {
+		margin-bottom: 8px;
+		font-size: 1.125rem;
+		text-align: center;
+	}
+
+	.inspiratie-tekst p {
+		font-size: 0.75rem;
+		line-height: 1.4;
+	}
+
+	.inspiratie-tekst .knop {
+		width: 185px;
+		height: 24px;
+		margin-top: 14px;
+		gap: 40px;
+		font-size: 0.6875rem;
+	}
+
+	/* Stijlpagina's */
+	.intro {
+		grid-template-columns: 1fr;
+	}
+
+	.intro-tekst {
+		padding: 9px 11px 6px;
+		background-color: #E6E1D8;
+	}
+
+	.intro-tekst h1 {
+		font-size: 1.25rem;
+	}
+
+	.intro-tekst p {
+		margin-top: 2px;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 1.3;
+	}
+
+	.intro > figure,
+	.intro > figure img {
+		height: auto;
+	}
+
+	.intro > figure img {
+		width: 100%;
+		height: 148px;
+	}
+
+	.uitleg h2,
+	.kenmerken h2,
+	.outfit h2 {
+		font-size: 1.375rem;
+	}
+
+	.uitleg h2 {
+		padding: 2px 0 4px;
+	}
+
+	.uitleg-vlak {
+		padding: 10px 14px 10px;
+		gap: 14px;
+	}
+
+	.uitleg-vlak p {
+		padding: 8px 10px;
+		font-size: 0.75rem;
+		line-height: 1.4;
+	}
+
+	.uitleg-vlak p:nth-of-type(odd),
+	.uitleg-vlak p:nth-of-type(even) {
+		align-self: stretch;
+	}
+
+	.kenmerken {
+		padding: 0 13px;
+	}
+
+	.kenmerken h2 {
+		padding: 2px 0 10px;
+	}
+
+	.kenmerken-lijst {
+		grid-template-columns: 1fr 1fr;
+		gap: 6px;
+	}
+
+	.kenmerken-lijst img {
+		height: 110px;
+	}
+
+	.kenmerken-lijst figcaption {
+		height: 38px;
+		font-size: 0.875rem;
+	}
+
+	.outfit h2 {
+		padding: 12px 0 8px;
+	}
+
+	.outfit-vlak {
+		grid-template-columns: 1fr;
+		width: auto;
+		margin: 0 30px;
+		padding: 16px 0 16px;
+		row-gap: 20px;
+	}
+
+	.outfit-vlak figure {
+		width: 226px;
+	}
+
+	.outfit-vlak img {
+		height: 324px;
+	}
+
+	.outfit-vlak figcaption {
+		height: 49px;
+		font-size: 0.875rem;
+	}
+
+	.winkelknop {
+		padding: 16px 0 14px;
+	}
+
+	.winkelknop .knop {
+		width: 190px;
+		height: 34px;
+		gap: 30px;
+		font-size: 0.75rem;
+	}
+
+	/* Contact */
+	.contact-intro {
+		padding: 0 0 10px;
+		border-top: 1px solid #1C1C1C;
+	}
+
+	.contact-intro h1 {
+		padding-top: 10px;
+		font-size: 1.375rem;
+	}
+
+	.contact-intro p {
+		max-width: 260px;
+		margin-top: 2px;
+		font-size: 0.75rem;
+		line-height: 1.3;
+	}
+
+	.contact-intro img {
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.contact-redenen {
+		padding: 8px 14px 0;
+		border-top: 1px solid #1C1C1C;
+		border-bottom: 1px solid #1C1C1C;
+	}
+
+	.contact-redenen h2 {
+		gap: 0;
+		font-size: 1rem;
+	}
+
+	.contact-redenen h2::before,
+	.contact-redenen h2::after {
+		display: none;
+	}
+
+	.redenen {
+		grid-template-columns: 1fr;
+		row-gap: 20px;
+		width: 278px;
+		margin: 14px auto 24px;
+	}
+
+	.redenen article {
+		padding: 22px 0 26px;
+	}
+
+	.icoon-cirkel {
+		width: 71px;
+		height: 71px;
+	}
+
+	.redenen h3 {
+		margin-top: 6px;
+		font-size: 1rem;
+	}
+
+	.redenen p {
+		margin-top: 10px;
+		font-size: 0.75rem;
+		line-height: 1.5;
+	}
+
+	.contact-formulier {
+		padding: 12px 24px 28px;
+	}
+
+	.contact-formulier h2 {
+		font-size: 1.125rem;
+	}
+
+	.contact-formulier form {
+		margin-top: 14px;
+		padding: 14px 16px 24px;
+		background-color: #D9D9D9;
+	}
+
+	.contact-formulier legend,
+	.veld label {
+		font-size: 0.6875rem;
+	}
+
+	.aanhef-keuze {
+		margin-top: 6px;
+		font-size: 0.6875rem;
+	}
+
+	.veld {
+		margin-top: 16px;
+	}
+
+	.veld label {
+		margin-bottom: 6px;
+	}
+
+	.veld input,
+	.veld textarea {
+		height: 31px;
+		padding: 0 12px;
+		font-size: 0.6875rem;
+	}
+
+	.veld textarea {
+		padding: 9px 12px;
+		min-height: 31px;
+	}
+
+	.verstuur {
+		width: 214px;
+		height: 28px;
+		margin-top: 30px;
+		padding: 0 34px 0 0;
+		background-position: right 28px center;
+		background-size: 22px 10px;
+		font-size: 0.75rem;
+	}
+
+	/* Footer */
+	.paginavoet {
+		padding: 10px 0 16px;
+		background-color: #E6E1D8;
+		border-top: 2px solid #1C1C1C;
+	}
+
+	.voet-logo img {
+		width: 100px;
+		margin: 0 auto;
+	}
+
+	.voet-raster {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 0 76px;
+		column-gap: 20px;
+	}
+
+	.voet-logo,
+	.voet-socials {
+		grid-column: 1 / span 2;
+	}
+
+	.voet-logo {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.voet-kolom {
+		display: block;
+	}
+
+	.voet-kolom h2 {
+		display: inline-block;
+		margin-bottom: 14px;
+		padding-bottom: 6px;
+		border-bottom: 2px solid #1C1C1C;
+		font-size: 0.9375rem;
+		line-height: 1.3;
+	}
+
+	.voet-kolom li {
+		margin-bottom: 12px;
+	}
+
+	.voet-kolom a {
+		display: inline-block;
+		min-width: 52px;
+		padding-bottom: 1px;
+		border-bottom: 1px solid #1C1C1C;
+		font-size: 0.8125rem;
+		line-height: 1.7;
+	}
+
+	.voet-kolom a:hover {
+		border-bottom-color: #7A8065;
+	}
+
+	.voet-socials h2 {
+		display: none;
+	}
+
+	.socials-lijst {
+		margin-top: 8px;
+	}
+
+	.socials-lijst li {
+		margin: 0 11px;
+	}
+
+	.socials-lijst img {
+		width: 20px;
+	}
+
+	.copyright {
+		margin-top: 14px;
+		clear: both;
+		padding-top: 8px;
+	}
+
+	/* Cookies */
+	.cookies {
+		right: 10px;
+		bottom: 10px;
+		left: 10px;
+		padding: 16px 18px 18px;
+	}
+
+	.cookies p {
+		margin-top: 8px;
+	}
+
+	.cookies-knoppen {
+		gap: 10px;
+		margin-top: 14px;
+	}
+
+	.cookies .knop {
+		flex: 1 1 0;
+		padding: 0 8px;
+	}
+}
